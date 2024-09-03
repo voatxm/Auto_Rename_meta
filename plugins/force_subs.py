@@ -32,7 +32,7 @@ async def forces_sub(client, message):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"📢 Join {channel.capitalize()} 📢", url=f"https://t.me/{channel}"
+                text=f"📢 𝐉𝐨𝐢𝐧 {channel.capitalize()} 📢", url=f"https://t.me/{channel}"
             )
         ]
         for channel in not_joined_channels
@@ -40,12 +40,12 @@ async def forces_sub(client, message):
     buttons.append(
         [
             InlineKeyboardButton(
-                text="✅ I am joined ✅", callback_data="check_subscription"
+                text="✅ 𝐈 𝐀𝐦 𝐉𝐨𝐢𝐧𝐞𝐝 ✅", callback_data="check_subscription"
             )
         ]
     )
 
-    text = "**Sorry, you're not joined to all required channels 😐. Please join the update channels to continue**"
+    text = "**𝐒𝐨𝐫𝐫𝐲, 𝐲𝐨𝐮'𝐫𝐞 𝐧𝐨𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐭𝐨 𝐚𝐥𝐥 𝐫𝐞𝐪𝐮𝐢𝐫𝐞𝐝 𝐜𝐡𝐚𝐧𝐧𝐞𝐥𝐬 😐. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 𝐭𝐡𝐞 𝐮𝐩𝐝𝐚𝐭𝐞 𝐜𝐡𝐚𝐧𝐧𝐞𝐥𝐬 𝐭𝐨 𝐜𝐨𝐧𝐭𝐢𝐧𝐮𝐞**"
     await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
 
 
@@ -64,13 +64,13 @@ async def check_subscription(client, callback_query: CallbackQuery):
 
     if not not_joined_channels:
         await callback_query.message.edit_text(
-            "**You have joined all the required channels. Thank you! 😊 /start now**"
+            "**𝐘𝐨𝐮 𝐡𝐚𝐯𝐞 𝐣𝐨𝐢𝐧𝐞𝐝 𝐚𝐥𝐥 𝐭𝐡𝐞 𝐫𝐞𝐪𝐮𝐢𝐫𝐞𝐝 𝐜𝐡𝐚𝐧𝐧𝐞𝐥𝐬. 𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮! 😊 /start 𝐧𝐨𝐰**"
         )
     else:
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=f"📢 Join {channel.capitalize()} 📢",
+                    text=f"📢 𝐉𝐨𝐢𝐧 {channel.capitalize()} 📢",
                     url=f"https://t.me/{channel}",
                 )
             ]
@@ -79,12 +79,12 @@ async def check_subscription(client, callback_query: CallbackQuery):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text="✅ I am joined", callback_data="check_subscription"
+                    text="✅ 𝐈 𝐀𝐦 𝐉𝐨𝐢𝐧𝐞𝐝", callback_data="check_subscription"
                 )
             ]
         )
 
-        text = "**You haven't joined all the required channels. Please join them to continue. **"
+        text = "**𝐘𝐨𝐮 𝐡𝐚𝐯𝐞𝐧'𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐚𝐥𝐥 𝐭𝐡𝐞 𝐫𝐞𝐪𝐮𝐢𝐫𝐞𝐝 𝐜𝐡𝐚𝐧𝐧𝐞𝐥𝐬. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 𝐭𝐡𝐞𝐦 𝐭𝐨 𝐜𝐨𝐧𝐭𝐢𝐧𝐮𝐞. **"
         await callback_query.message.edit_text(
             text=text, reply_markup=InlineKeyboardMarkup(buttons)
         )
