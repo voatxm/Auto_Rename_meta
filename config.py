@@ -27,15 +27,15 @@ class Config(object):
 class Txt(object):
     # part of text configuration
         
-    START_TXT = """Hello {} 
+    START_TXT = """<b>ʜᴇʟʟᴏ {} 
     
-➻ This Is An Advanced And Yet Powerful Rename Bot.
+➻ ᴛʜɪs ɪs ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ ʏᴇᴛ ᴘᴏᴡᴇʀғᴜʟ ʀᴇɴᴀᴍᴇ ʙᴏᴛ.
     
-➻ Using This Bot You Can Auto Rename Of Your Files.
+➻ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ ʏᴏᴜ ᴄᴀɴ ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ᴏғ ʏᴏᴜʀ ғɪʟᴇs.
     
-➻ This Bot Also Supports Custom Thumbnail And Custom Caption.
+➻ ᴛʜɪs ʙᴏᴛ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛs ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.
     
-➻ Use /tutorial Command To Know How To Use Me.
+➻ ᴜsᴇ /tutorial ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ.</b>
 
 <b>Bot Is Made By @AshutoshGoswami24</b>
 
@@ -59,21 +59,21 @@ Use These Keywords To Setup Custom File Name
 <b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a>
 <b>🧑‍💻 Developer :</b> <a href='https://t.me/AshutoshGoswami24'>PandaWep</a>
     
-<b>♻️ Bot Made By :</b> @AshutoshGoswami24"""
+<b>ʙᴏᴛ ɪs ᴏᴡɴᴇᴅ ʙʏ :</b> @AshutoshGoswami24"""
 
     
     THUMBNAIL_TXT = """<b><u>🖼️  HOW TO SET THUMBNAIL</u></b>
     
-⦿ You Can Add Custom Thumbnail Simply By Sending A Photo To Me....
+<b>⦿ ʏᴏᴜ ᴄᴀɴ ᴀᴅᴅ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ sɪᴍᴘʟʏ ʙʏ sᴇɴᴅɪɴɢ ᴀ ᴘʜᴏᴛᴏ ᴛᴏ ᴍᴇ....
     
 ⦿ /viewthumb - Use This Command To See Your Thumbnail
-⦿ /delthumb - Use This Command To Delete Your Thumbnail"""
+⦿ /delthumb - Use This Command To Delete Your Thumbnail</b>"""
 
     CAPTION_TXT = """<b><u>📝  HOW TO SET CAPTION</u></b>
     
-⦿ /set_caption - Use This Command To Set Your Caption
-⦿ /see_caption - Use This Command To See Your Caption
-⦿ /del_caption - Use This Command To Delete Your Caption"""
+<b>⦿ /set_caption - ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ sᴇᴛ ʏᴏᴜʀ ᴄᴀᴘᴛɪᴏɴ
+⦿ /see_caption - ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ sᴇᴇ ʏᴏᴜʀ ᴄᴀᴘᴛɪᴏɴ
+⦿ /del_caption - ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴄᴀᴘᴛɪᴏɴ</b>"""
 
     PROGRESS_BAR = """<b>\n
 ╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
@@ -85,15 +85,15 @@ Use These Keywords To Setup Custom File Name
 ╰━━━━━━━━━━━━━━━➣ </b>"""
     
     
-    DONATE_TXT = """<b>🥲 Thanks For Showing Interest In Donation! ❤️</b>
+    DONATE_TXT = """<b>🥲 ᴛʜᴀɴᴋs ғᴏʀ sʜᴏᴡɪɴɢ ɪɴᴛᴇʀᴇsᴛ ɪɴ ᴅᴏɴᴀᴛɪᴏɴ! ❤️</b>
     
-If You Like My Bots & Projects, You Can 🎁 Donate Me Any Amount From 10 Rs Upto Your Choice.
+<b>ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴍʏ ʙᴏᴛs & ᴘʀᴏᴊᴇᴄᴛs, ʏᴏᴜ ᴄᴀɴ 🎁 ᴅᴏɴᴀᴛᴇ ᴍᴇ ᴀɴʏ ᴀᴍᴏᴜɴᴛ ғʀᴏᴍ 𝟷𝟶 ʀs ᴜᴘᴛᴏ ʏᴏᴜʀ ᴄʜᴏɪᴄᴇ.</b>
     
-<b>My UPI - PandaWep@ybl</b> """
+<b>ᴍʏ ᴜᴘɪ - PandaWep@ybl</b> """
     
     HELP_TXT = """<b>Hey</b> {}
     
-Joine @AshutoshGoswami24 To Help """
+Join @AshutoshGoswami24 To Help """
 
 
 
