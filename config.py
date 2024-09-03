@@ -18,7 +18,7 @@ class Config(object):
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
     FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'Yugen_Bots,Paradox_Bots').split(',')
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002197485186"))
-    PORT = int(os.environ.get("PORT", "8080"))
+    PORT = int(os.environ.get("PORT", ""))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "False"))
