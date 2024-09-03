@@ -137,7 +137,7 @@ def extract_episode_number(filename):
 
 
 # Example Usage:
-filename = "Naruto Shippuden S01[episode] [quality][Dual Audio] @AshutoshGoswami24.mkv"
+filename = "Naruto Shippuden S01[episode] [quality][Dual Audio] @PARADOX_EMPEROR.mkv"
 episode_number = extract_episode_number(filename)
 print(f"Extracted Episode Number: {episode_number}")
 
@@ -150,7 +150,7 @@ async def auto_rename_files(client, message):
 
     if not format_template:
         return await message.reply_text(
-            "Please Set An Auto Rename Format First Using /autorename"
+            "𝐏𝐥𝐞𝐚𝐬𝐞 𝐒𝐞𝐭 𝐀𝐧 𝐀𝐮𝐭𝐨 𝐑𝐞𝐧𝐚𝐦𝐞 𝐅𝐨𝐫𝐦𝐚𝐭 𝐅𝐢𝐫𝐬𝐭 𝐔𝐬𝐢𝐧𝐠 /autorename"
         )
 
     if message.document:
@@ -198,13 +198,13 @@ async def auto_rename_files(client, message):
             message,
             file_name=renamed_file_path,
             progress=progress_for_pyrogram,
-            progress_args=("Download Started...", download_msg, time.time()),
+            progress_args=("𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐒𝐭𝐚𝐫𝐭𝐞𝐝...", download_msg, time.time()),
         )
     except Exception as e:
         del renaming_operations[file_id]
-        return await download_msg.edit(f"**Download Error:** {e}")
+        return await download_msg.edit(f"**𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐄𝐫𝐫𝐨𝐫:** {e}")
 
-    await download_msg.edit("Renaming and Adding Metadata...")
+    await download_msg.edit("𝐑𝐞𝐧𝐚𝐦𝐢𝐧𝐠 𝐚𝐧𝐝 𝐀𝐝𝐝𝐢𝐧𝐠 𝐌𝐞𝐭𝐚𝐝𝐚𝐭𝐚...")
 
     try:
         # Rename the file first
@@ -230,12 +230,12 @@ async def auto_rename_files(client, message):
                         path = metadata_file_path
                     else:
                         error_message = stderr.decode()
-                        await download_msg.edit(f"**Metadata Error:**\n{error_message}")
+                        await download_msg.edit(f"**𝐌𝐞𝐭𝐚𝐝𝐚𝐭𝐚 𝐄𝐫𝐫𝐨𝐫:**\n{error_message}")
                 except asyncio.TimeoutError:
-                    await download_msg.edit("**ffmpeg command timed out.**")
+                    await download_msg.edit("**𝐟𝐟𝐦𝐩𝐞𝐠 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐭𝐢𝐦𝐞𝐝 𝐨𝐮𝐭.**")
                     return
                 except Exception as e:
-                    await download_msg.edit(f"**Exception occurred:**\n{str(e)}")
+                    await download_msg.edit(f"**𝐄𝐱𝐜𝐞𝐩𝐭𝐢𝐨𝐧 𝐨𝐜𝐜𝐮𝐫𝐫𝐞𝐝:**\n{str(e)}")
                     return
         else:
             metadata_added = True
@@ -243,12 +243,12 @@ async def auto_rename_files(client, message):
         if not metadata_added:
             # Metadata addition failed; upload the renamed file only
             await download_msg.edit(
-                "Metadata addition failed. Uploading the renamed file only."
+                "𝐌𝐞𝐭𝐚𝐝𝐚𝐭𝐚 𝐚𝐝𝐝𝐢𝐭𝐢𝐨𝐧 𝐟𝐚𝐢𝐥𝐞𝐝. 𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐭𝐡𝐞 𝐫𝐞𝐧𝐚𝐦𝐞𝐝 𝐟𝐢𝐥𝐞 𝐨𝐧𝐥𝐲."
             )
             path = renamed_file_path
 
         # Upload the file
-        upload_msg = await download_msg.edit("Uploading the file...")
+        upload_msg = await download_msg.edit("𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐭𝐡𝐞 𝐟𝐢𝐥𝐞...")
 
         ph_path = None
         c_caption = await AshutoshGoswami24.get_caption(message.chat.id)
@@ -282,7 +282,7 @@ async def auto_rename_files(client, message):
                     thumb=ph_path,
                     caption=caption,
                     progress=progress_for_pyrogram,
-                    progress_args=("Upload Started...", upload_msg, time.time()),
+                    progress_args=("𝐔𝐩𝐥𝐨𝐚𝐝 𝐒𝐭𝐚𝐫𝐭𝐞𝐝...", upload_msg, time.time()),
                 )
             elif media_type == "video":
                 await client.send_video(
@@ -292,7 +292,7 @@ async def auto_rename_files(client, message):
                     thumb=ph_path,
                     duration=0,
                     progress=progress_for_pyrogram,
-                    progress_args=("Upload Started...", upload_msg, time.time()),
+                    progress_args=("𝐔𝐩𝐥𝐨𝐚𝐝 𝐒𝐭𝐚𝐫𝐭𝐞𝐝...", upload_msg, time.time()),
                 )
             elif media_type == "audio":
                 await client.send_audio(
@@ -302,18 +302,18 @@ async def auto_rename_files(client, message):
                     thumb=ph_path,
                     duration=0,
                     progress=progress_for_pyrogram,
-                    progress_args=("Upload Started...", upload_msg, time.time()),
+                    progress_args=("𝐔𝐩𝐥𝐨𝐚𝐝 𝐒𝐭𝐚𝐫𝐭𝐞𝐝...", upload_msg, time.time()),
                 )
         except Exception as e:
             os.remove(path)
             if ph_path:
                 os.remove(ph_path)
-            return await upload_msg.edit(f"**Upload Error:** {e}")
+            return await upload_msg.edit(f"**𝐔𝐩𝐥𝐨𝐚𝐝 𝐄𝐫𝐫𝐨𝐫:** {e}")
 
         # await upload_msg.edit("Upload Complete ✅")
 
     except Exception as e:
-        await download_msg.edit(f"**Error:** {e}")
+        await download_msg.edit(f"**𝐄𝐫𝐫𝐨𝐫:** {e}")
 
     finally:
         # Clean up
