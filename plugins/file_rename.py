@@ -137,7 +137,7 @@ def extract_episode_number(filename):
 
 
 # Example Usage:
-filename = "Naruto Shippuden S01[episode] [quality][Dual Audio] @PARADOX_EMPEROR.mkv"
+filename = "Naruto Shippuden S01EP{episode} {quality}[Dual Audio] @PARADOX_EMPEROR.mkv"
 episode_number = extract_episode_number(filename)
 print(f"Extracted Episode Number: {episode_number}")
 
@@ -166,7 +166,7 @@ async def auto_rename_files(client, message):
         file_name = f"{message.audio.file_name}.mp3"
         media_type = media_preference or "audio"
     else:
-        return await message.reply_text("Unsupported File Type")
+        return await message.reply_text("𝐔𝐧𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐅𝐢𝐥𝐞 𝐓𝐲𝐩𝐞")
 
     if file_id in renaming_operations:
         elapsed_time = (datetime.now() - renaming_operations[file_id]).seconds
@@ -178,11 +178,11 @@ async def auto_rename_files(client, message):
     episode_number = extract_episode_number(file_name)
     if episode_number:
         format_template = format_template.replace(
-            "[episode]", "EP" + str(episode_number), 1
+            "{episode}", str(episode_number), 1
         )
 
         quality = extract_quality(file_name)
-        format_template = format_template.replace("[quality]", quality)
+        format_template = format_template.replace("{quality}", quality)
 
     _, file_extension = os.path.splitext(file_name)
     renamed_file_name = f"{format_template}{file_extension}"
@@ -191,7 +191,7 @@ async def auto_rename_files(client, message):
     os.makedirs(os.path.dirname(renamed_file_path), exist_ok=True)
     os.makedirs(os.path.dirname(metadata_file_path), exist_ok=True)
 
-    download_msg = await message.reply_text("Downloading the file...")
+    download_msg = await message.reply_text("𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐭𝐡𝐞 𝐟𝐢𝐥𝐞...")
 
     try:
         path = await client.download_media(
