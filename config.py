@@ -3,9 +3,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "3257596471c6d08212b3c0a47cc815ea")
-    API_HASH  = os.environ.get("API_HASH", "23578854")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7462219308:AAFzBuInTHyM2R-FqVvipk-r6sXzb9SyuI8") 
+    API_ID    = os.environ.get("API_ID", "9ea49405d5a93e784114c469f5ce4bbd")
+    API_HASH  = os.environ.get("API_HASH", "26634100")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7504372339:AAGEAyLI5le3GIj0QnlJa3EJERj_Vl0Shgk") 
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","Yugen")     
@@ -16,12 +16,12 @@ class Config(object):
     START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/8fe5276a43438e5390909.jpg")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1302933634').split()]
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
-    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'Nameless_botz').split(',')
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002197485186"))
-    PORT = int(os.environ.get("PORT", ""))
+    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'Yugen_Bots').split(',')
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002123409511"))
+    PORT = int(os.environ.get("PORT", "8080"))
     
     # wes response configuration     
-    WEBHOOK = bool(os.environ.get("WEBHOOK", "False"))
+    WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
 
 
 class Txt(object):
