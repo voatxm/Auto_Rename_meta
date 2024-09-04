@@ -178,7 +178,7 @@ async def auto_rename_files(client, message):
     episode_number = extract_episode_number(file_name)
     if episode_number:
         format_template = format_template.replace(
-            "[episode]", "EP" + str(episode_number), 1
+            "[episode]", "" + str(episode_number), 1
         )
 
         quality = extract_quality(file_name)
