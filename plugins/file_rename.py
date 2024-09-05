@@ -26,8 +26,8 @@ pattern3 = re.compile(r"(?:[([<{]?\s*(?:E|EP)\s*(\d+)\s*[)\]>}]?)")
 pattern3_2 = re.compile(r"(?:\s*-\s*(\d+)\s*)")
 # Pattern 4: S2 09 ex.
 pattern4 = re.compile(r"S(\d+)[^\d]*(\d+)", re.IGNORECASE)
-# Pattern 5: Vol 2 Chapter 55
-pattern5 = pattern = re.compile(r'Vol (\d+) Chapter (\d+)')
+# Pattern M: Vol 2 Chapter 55
+patternM = re.compile(r'Vol (\d+) Chapter (\d+)')
 # Pattern X: Standalone Episode Number
 patternX = re.compile(r"(\d+)")
 # QUALITY PATTERNS
@@ -128,8 +128,8 @@ def extract_episode_number(filename):
         print("Matched Pattern 4")
         return match.group(2)  # Extracted episode number 
         
-    # Try Pattern 5
-    match = re.search(pattern5, filename)
+    # Try Pattern M
+    match = re.search(patternM, filename)
     if match:
         print("Matched Pattern 5")
         return match.group(2) # Extracted episode number
