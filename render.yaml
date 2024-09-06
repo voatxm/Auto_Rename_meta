@@ -7,7 +7,7 @@ services:
     startCommand: python3 PandaXAshu.py
     repo: 
     branch: main
-    autoDeploy: false
+    autoDeploy: True
     envVars:
       - key: BOT_TOKEN
         sync: false
