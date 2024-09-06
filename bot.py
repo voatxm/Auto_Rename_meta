@@ -12,7 +12,7 @@ import asyncio
 from plugins.webs import web_server
 import pyromod
 
-logging.config.dictConfig("logging.conf")
+#logging.config.dictConfig("logging.conf")
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 
