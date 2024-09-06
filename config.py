@@ -8,7 +8,7 @@ class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "7504372339:AAGEAyLI5le3GIj0QnlJa3EJERj_Vl0Shgk") 
 
     # database config
-    DB_NAME = os.environ.get("DB_NAME","Yugen")     
+    DB_NAME = os.environ.get("DB_NAME","AshutoshGoswami24")     
     DB_URL  = os.environ.get("DB_URL","mongodb+srv://zoey611870:5ErfLUWPKH44hkqK@cluster0.7doyqob.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
  
     # other configs
@@ -18,7 +18,7 @@ class Config(object):
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
     FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'Yugen_Bots').split(',')
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002123409511"))
-    PORT = int(os.environ.get("PORT", "8080"))
+    PORT = int(os.environ.get("PORT", ""))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
@@ -27,67 +27,73 @@ class Config(object):
 class Txt(object):
     # part of text configuration
         
-    START_TXT = """𝐇𝐞𝐲, {mention} 
+    START_TXT = """Hello {} 
     
-➻ 𝐓𝐡𝐢𝐬 𝐈𝐬 𝐀𝐧 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐀𝐧𝐝 𝐘𝐞𝐭 𝐏𝐨𝐰𝐞𝐫𝐟𝐮𝐥 𝐑𝐞𝐧𝐚𝐦𝐞 𝐁𝐨𝐭.
+âž» This Is An Advanced And Yet Powerful Rename Bot.
     
-➻ 𝐔𝐬𝐢𝐧𝐠 𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 𝐘𝐨𝐮 𝐂𝐚𝐧 𝐀𝐮𝐭𝐨 𝐑𝐞𝐧𝐚𝐦𝐞 𝐎𝐟 𝐘𝐨𝐮𝐫 𝐅𝐢𝐥𝐞𝐬.
+âž» Using This Bot You Can Auto Rename Of Your Files.
     
-➻ 𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 𝐀𝐥𝐬𝐨 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐬 𝐂𝐮𝐬𝐭𝐨𝐦 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐀𝐧𝐝 𝐂𝐮𝐬𝐭𝐨𝐦 𝐂𝐚𝐩𝐭𝐢𝐨𝐧.
+âž» This Bot Also Supports Custom Thumbnail And Custom Caption.
     
-➻ 𝐔𝐬𝐞 /𝐭𝐮𝐭𝐨𝐫𝐢𝐚𝐥 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐓𝐨 𝐊𝐧𝐨𝐰 𝐇𝐨𝐰 𝐓𝐨 𝐔𝐬𝐞 𝐌𝐞.
+âž» Use /tutorial Command To Know How To Use Me.
 
+<b>Bot Is Made By @AshutoshGoswami24</b>
+
+<b><a href='https://github.com/AshutoshGoswami24/Auto-Rename-Bot'>AshutoshGoswami24/Auto-Rename-Bot.git</a></b>
 """
     
-    FILE_NAME_TXT = """<b><u>𝐒𝐄𝐓𝐔𝐏 𝐀𝐔𝐓𝐎 𝐑𝐄𝐍𝐀𝐌𝐄 𝐅𝐎𝐑𝐌𝐀𝐓</u></b>
+    FILE_NAME_TXT = """<b><u>SETUP AUTO RENAME FORMAT</u></b>
 
-𝐔𝐬𝐞 𝐓𝐡𝐞𝐬𝐞 𝐊𝐞𝐲𝐰𝐨𝐫𝐝𝐬 𝐓𝐨 𝐒𝐞𝐭𝐮𝐩 𝐂𝐮𝐬𝐭𝐨𝐦 𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞
+Use These Keywords To Setup Custom File Name
 
-✓ `{episode}` :- 𝐓𝐨 𝐑𝐞𝐩𝐥𝐚𝐜𝐞 𝐄𝐩𝐢𝐬𝐨𝐝𝐞 𝐍𝐮𝐦𝐛𝐞𝐫
-✓ `{quality}` :- 𝐓𝐨 𝐑𝐞𝐩𝐥𝐚𝐜𝐞 𝐕𝐢𝐝𝐞𝐨 𝐑𝐞𝐬𝐨𝐥𝐮𝐭𝐢𝐨𝐧
+âœ“ `[episode]` :- To Replace Episode Number
+âœ“ `[quality]` :- To Replace Video Resolution
 
-<b>➻ 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 :</b> <code> /autorename Naruto Shippuden S01EP{episode} {quality}[Dual Audio] @PARADOX_EMPEROR</code>
+<b>âž» Example :</b> <code> /autorename Naruto Shippuden S01[episode] [quality][Dual Audio] @AshutoshGoswami24</code>
 
-<b>➻ 𝐘𝐨𝐮𝐫 𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐀𝐮𝐭𝐨 𝐑𝐞𝐧𝐚𝐦𝐞 𝐅𝐨𝐫𝐦𝐚𝐭 :</b> <code>{format_template}</code> """
+<b>âž» Your Current Auto Rename Format :</b> <code>{format_template}</code> """
     
-    ABOUT_TXT = f"""<b>🤖 My Name : </b>
-<b>📝 Language :</b> <a href='https://python.org'>Python 3</a>
-<b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram 2.0</a>
+    ABOUT_TXT = f"""<b>ðŸ¤– My Name :</b>
+<b>ðŸ“ Language :</b> <a href='https://python.org'>Python 3</a>
+<b>ðŸ“š Library :</b> <a href='https://pyrogram.org'>Pyrogram 2.0</a>
+<b>ðŸš€ Server :</b> <a href='https://heroku.com'>Heroku</a>
+<b>ðŸ§‘â€ðŸ’» Developer :</b> <a href='https://t.me/AshutoshGoswami24'>PandaWep</a>
     
-"""
+<b>â™»ï¸ Bot Made By :</b> @AshutoshGoswami24"""
 
     
-    THUMBNAIL_TXT = """<b><u>𝐇𝐎𝐖 𝐓𝐎 𝐒𝐄𝐓 𝐓𝐇𝐔𝐌𝐁𝐍𝐀𝐈𝐋</u></b>
+    THUMBNAIL_TXT = """<b><u>ðŸ–¼ï¸  HOW TO SET THUMBNAIL</u></b>
     
-⦿ 𝐘𝐨𝐮 𝐂𝐚𝐧 𝐀𝐝𝐝 𝐂𝐮𝐬𝐭𝐨𝐦 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐒𝐢𝐦𝐩𝐥𝐲 𝐁𝐲 𝐒𝐞𝐧𝐝𝐢𝐧𝐠 𝐀 𝐏𝐡𝐨𝐭𝐨 𝐓𝐨 𝐌𝐞....
+â¦¿ You Can Add Custom Thumbnail Simply By Sending A Photo To Me....
     
-⦿ /viewthumb - 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐓𝐨 𝐒𝐞𝐞 𝐘𝐨𝐮𝐫 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥
-⦿ /delthumb - 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐓𝐨 𝐃𝐞𝐥𝐞𝐭𝐞 𝐘𝐨𝐮𝐫 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 """
+â¦¿ /viewthumb - Use This Command To See Your Thumbnail
+â¦¿ /delthumb - Use This Command To Delete Your Thumbnail"""
+
+    CAPTION_TXT = """<b><u>ðŸ“Â  HOW TO SET CAPTION</u></b>
     
-    CAPTION_TXT = """<b><u>𝐇𝐎𝐖 𝐓𝐎 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍</u></b>
-    
-⦿ /set_caption- 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐓𝐨 𝐒𝐞𝐭 𝐘𝐨𝐮𝐫 𝐂𝐚𝐩𝐭𝐢𝐨𝐧
-⦿ /see_caption - 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐓𝐨 𝐒𝐞𝐞 𝐘𝐨𝐮𝐫 𝐂𝐚𝐩𝐭𝐢𝐨𝐧
-⦿ /del_caption - 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐓𝐨 𝐃𝐞𝐥𝐞𝐭𝐞 𝐘𝐨𝐮𝐫 𝐂𝐚𝐩𝐭𝐢𝐨𝐧"""
+â¦¿Â /set_caption - Use This Command To Set Your Caption
+â¦¿ /see_caption - Use This Command To See Your Caption
+â¦¿ /del_caption - Use This Command To Delete Your Caption"""
 
     PROGRESS_BAR = """<b>\n
-╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
-┣⪼ 🗃️ Sɪᴢᴇ: {1} | {2}
-┣⪼ ⏳️ Dᴏɴᴇ : {0}%
-┣⪼ 🚀 Sᴩᴇᴇᴅ: {3}/s
-┣⪼ ⏰️ Eᴛᴀ: {4}
-╰━━━━━━━━━━━━━━━➣ </b>"""
+â•­â”â”â”â”â°á´˜Ê€á´É¢Ê€á´‡ss Ê™á´€Ê€â±â”âž£
+â”£âª¼ ðŸ—ƒï¸ SÉªá´¢á´‡: {1} | {2}
+â”£âª¼ â³ï¸ Dá´É´á´‡ : {0}%
+â”£âª¼ ðŸš€ Sá´©á´‡á´‡á´…: {3}/s
+â”£âª¼ â°ï¸ Eá´›á´€: {4}
+â”£âª¼ ðŸ¥º joine Plz: @AshutoshGoswami24
+â•°â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”âž£ </b>"""
     
     
-    DONATE_TXT = """<b>🥲 𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐒𝐡𝐨𝐰𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐞𝐬𝐭 𝐈𝐧 𝐃𝐨𝐧𝐚𝐭𝐢𝐨𝐧! ❤️</b>
+    DONATE_TXT = """<b>ðŸ¥² Thanks For Showing Interest In Donation! â¤ï¸</b>
     
-𝐈𝐟 𝐘𝐨𝐮 𝐋𝐢𝐤𝐞 𝐌𝐲 𝐁𝐨𝐭𝐬 & 𝐏𝐫𝐨𝐣𝐞𝐜𝐭𝐬, 𝐘𝐨𝐮 𝐂𝐚𝐧 🎁 𝐃𝐨𝐧𝐚𝐭𝐞 𝐌𝐞 𝐀𝐧𝐲 𝐀𝐦𝐨𝐮𝐧𝐭 𝐔𝐩𝐭𝐨 𝐘𝐨𝐮𝐫 𝐂𝐡𝐨𝐢𝐜𝐞.
+If You Like My Bots & Projects, You Can ðŸŽ Donate Me Any Amount From 10 Rs Upto Your Choice.
     
-<b>𝐌𝐲 𝐔𝐏𝐈 - `yugenbots@upi`</b> """
+<b>My UPI - PandaWep@ybl</b> """
     
-    HELP_TXT = """<b>𝐇𝐞𝐲</b> {mention}
+    HELP_TXT = """<b>Hey</b> {}
     
-𝐉𝐨𝐢𝐧 @Yugen_Bots_Support 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩 """
+Joine @AshutoshGoswami24 To Help """
 
 
 
