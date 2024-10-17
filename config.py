@@ -3,21 +3,21 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "26634100")
-    API_HASH  = os.environ.get("API_HASH", "9ea49405d5a93e784114c469f5ce4bbd")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7504372339:AAGEAyLI5le3GIj0QnlJa3EJERj_Vl0Shgk") 
+    API_ID    = os.environ.get("API_ID", "27011028")
+    API_HASH  = os.environ.get("API_HASH", "f757ca005f4a320bcea5ced947bbff5e")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7063637247:AAEtwan1HPZ15A8vavZJLCq1ml0_gyM0yis") 
 
     # database config
-    DB_NAME = os.environ.get("DB_NAME","Yugen")     
-    DB_URL  = os.environ.get("DB_URL","mongodb+srv://zoey611870:5ErfLUWPKH44hkqK@cluster0.7doyqob.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    DB_NAME = os.environ.get("DB_NAME","updatebot")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://mojawatjay26:DMSZJakoTKDqZyYD@updatebot.qk2u8.mongodb.net/?retryWrites=true&w=majority&appName=updatebot")
  
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/8fe5276a43438e5390909.jpg")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1302933634').split()]
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1355560957').split()]
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
-    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'Yugen_Bots').split(',')
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002123409511"))
+    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'manhwa_university').split(',')
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002467388993"))
     PORT = int(os.environ.get("PORT", "8080"))
     
     # wes response configuration     
